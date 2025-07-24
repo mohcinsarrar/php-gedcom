@@ -20,7 +20,7 @@ class Parser implements ParserInterface
         }
 
         $this->lineBuffer = file($fileName, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-        $this->currentLine = 0;
+        $this->currentLine = -1;
         $this->gedcom = new Gedcom();
         $this->errors = [];
 
