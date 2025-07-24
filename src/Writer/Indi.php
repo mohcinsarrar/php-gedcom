@@ -28,12 +28,22 @@ class Indi
         // update
         $level = 0;
 
-        $indi->getId();
+        $global_id = null;
+
+        $id = $indi->getId();
+        if($id != null){
+            $global_id = $id;
+        }
+        else{
+            $gid = $indi->getGid();
+            if($gid != null){
+                $global_id = $gid;
+            }
+        }
 
         // gid
-        $gid = $indi->getGid();
-        $output = $level.' @'.$gid."@ INDI\n";
-
+        $output = $level.' @'.$global_id."@ INDI\n";
+        
         // increase level after start indi
         $level++;
 
