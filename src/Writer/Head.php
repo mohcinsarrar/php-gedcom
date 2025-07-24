@@ -87,11 +87,13 @@ class Head
         }
 
         // CHAR
+        /*
         $char = $head->getChar();
         if ($char) {
             $_convert = \Gedcom\Writer\Head\Char::convert($char, $level);
             $output .= $_convert;
         }
+        */
         // PLAC
         $plac = $head->getPlac();
         if ($plac) {
