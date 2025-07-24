@@ -39,6 +39,7 @@ class Head
 
         // DEST
         $dest = $head->getDest();
+        $dest = $dest->getDest();
         if ($dest !== '' && $dest !== '0') {
             $output .= $level.' DEST '.$dest."\n";
         }
