@@ -47,12 +47,13 @@ class Even
         }
 
         // Plac
+        /*
         $plac = $even->getPlac();
         if (!empty($plac)) {
             $_convert = \Gedcom\Writer\Indi\Even\Plac::convert($plac, $level);
             $output .= $_convert;
         }
-
+        */
         // $caus;
         $caus = $even->getCaus();
         if (!empty($caus)) {
