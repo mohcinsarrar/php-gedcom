@@ -232,9 +232,15 @@ class Indi
         // chan
         $chan = $indi->getChan();
         if (!empty($chan)) {
-            $output .= $level.' CHAN '."\n";
-            $output .= ($level + 1).' DATE '.$chan[0]."\n";
-            $output .= ($level + 1).' TIME '.$chan[1]."\n";
+            $output .= $level.' CHAN'."\n";
+        
+            if ($chan->getDate()) {
+                $output .= ($level + 1).' DATE '.$chan->getDate()."\n";
+            }
+        
+            if ($chan->getTime()) {
+                $output .= ($level + 1).' TIME '.$chan->getTime()."\n";
+            }
         }
 
         // Bapl
