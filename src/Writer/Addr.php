@@ -35,7 +35,7 @@ class Addr
             $output .= ($level + 1).' CONT '.$cont."\n";
         }
 
-        return $output.(($level + 1).' ADR1 '.$addr->adr1."\n".
+        return $output.(($level + 1).' ADR1 '.$addr->getAdr1()."\n".
             ($level + 1).' ADR2 '.$addr->getAdr2()."\n".
             ($level + 1).' CITY '.$addr->getCity()."\n".
             ($level + 1).' STAE '.$addr->getStae()."\n".
