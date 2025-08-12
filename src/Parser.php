@@ -95,6 +95,11 @@ class Parser implements ParserInterface
         return $this->parseLine($line);
     }
 
+    public function getCurrentLine()
+    {
+        return $this->currentLine;
+    }
+
     private function parseLine(string $line): array
     {
         // Simple line parser that splits the line into level, tag, and value
