@@ -21,10 +21,22 @@ class Date extends \Gedcom\Parser\Component
     {
         $record = $parser->getCurrentLineRecord();
 
+        /*
         if (isset($record[1])) {
             $dat = new \Gedcom\Record\Date();
             if (!empty($record[2])) {
                 $dat->setDate($record[2]);
+            }
+        } else {
+            return null;
+        }*/
+
+        if (isset($record[1])) {
+            if (!empty($record[2])) {
+                return $record[2];
+            }
+            else{
+                return null;
             }
         } else {
             return null;
